@@ -1,0 +1,1098 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+	/* padding: 50px; */
+} 
+
+.header{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 15px;
+	background-color: yellowgreen;
+	z-index: 100;
+}
+
+
+.main__container {
+  max-width: 100%;
+
+}
+.main__page {
+  /* max-width: 1920px; */
+  margin: 0 auto;
+	position: relative;
+	padding: 50px;
+	background:  url("../img/1-1.jpg") no-repeat 0 0 / cover;
+
+}
+
+.main__transition {
+	animation: main-transition 10s linear infinite alternate running 0s forwards;
+
+}
+
+@keyframes main-transition{
+	0%{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	10%{
+		opacity: 1;
+		visibility: visible;
+	}
+	90%{
+		opacity: 1;
+		visibility: visible;
+	}
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+.transition {
+	transition: 2s;
+}
+
+.title {
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 1px 1px 10px rgb(20, 182, 231);
+  margin-bottom: 2px;
+	animation: title 2s linear 1 normal forwards 2s;
+}
+@keyframes title {
+	0%{
+		font-size: 0;
+		opacity: 0;
+	}
+	100%{
+		transform: rotate3d(0, 1, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+		opacity: 1;
+	}
+}
+
+/* trasition-duration */
+.transition__duration{
+	margin-bottom: 25px;
+	animation: block-duration 0.5s linear 2 alternate-reverse 1s forwards;
+}
+
+@keyframes block-duration {
+	0% {
+		
+		transform: rotate3d(0, 1, 0, 90deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+
+	}
+	100% {
+		background: rgb(235, 229, 229);		
+		transform: rotate3d(0, 1, 0, 0deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+
+	}
+}
+
+.duration__practice{
+	position: relative;
+	height: 200px;
+	margin: 0 auto;
+	transition: 2s;
+}
+
+.duration__practice div:nth-child(2){
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: rgba(255, 0, 0, 0.582);
+	transition: 2s;
+	animation: back-hover-2 2s linear 1 alternate-reverse running 0.5s backwards;
+
+}
+
+@keyframes back-hover-2{
+	0%{
+		
+	}
+	100%{
+		transform: rotate3d(0, 1, 0, 180deg) translate3d(400%, 50%, 0px) skew(0deg, 0deg) ;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+	
+	}
+}
+
+
+.duration__practice div:nth-child(1){
+	max-width: 200px;
+	background: yellow;
+	transition: 2s cubic-bezier(0, 1.13, 0, 1.14);
+	box-shadow: 1px 1px 2px #000, inset 1px 1px 2px #000;
+	animation: back-hover-1 2s linear 1 alternate-reverse running 0.5s backwards;
+}
+
+
+
+@keyframes back-hover-1{
+	0%{
+		
+		
+	}
+	100%{
+		transform: rotate3d(0, 1, 0, 180deg) translate3d(-400%, 50%, 0px) skew(0deg, 0deg) scale(1);
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+	
+	}
+
+}
+
+
+
+.duration__text {
+	padding: 15px;
+	max-width: 200px;
+	min-height: 200px;
+	background:yellowgreen;
+	position: relative;
+	transition: 2s;
+	backface-visibility: hidden;
+	animation: text-property 3s linear alternate running 0.001s;
+
+}
+
+.duration__practice:hover .duration__text{
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+	Backface-visibility: hidden;
+	width: 100px;
+	height: 100px;
+	font-size: 0;
+	overflow: hidden;
+	transition: 2s;
+}
+
+@keyframes text-property{
+	0%{
+		opacity: 0;
+		font-size: 0;
+		overflow: hidden;
+	}
+	100%{
+		opacity: 1;
+		
+		overflow: visible;
+		
+	}
+}
+.duration__practice:hover div:nth-child(2){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(400%, 50%, 0px) skew(0deg, 0deg) ;
+	transition: 2s cubic-bezier(0.03, 0.93, 1, 0.12);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	
+
+}
+
+
+.duration__practice:hover div:nth-child(1){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(-400%, 50%, 0px) skew(0deg, 0deg) scale(1);
+	transition: 2s cubic-bezier(0.03, 0.93, 1, 0.12);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	
+}
+
+
+/* transition-property */
+.transition__propetry{
+	margin-bottom: 25px;
+	animation: block-property 0.5s linear 2 alternate-reverse forwards 1s;
+
+}
+
+@keyframes block-property {
+	0% {
+		
+		transform: rotate3d(1, 0, 0, 90deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+		background: rgb(235, 229, 229);		
+
+
+	}
+	100% {
+		transform: rotate3d(1, 0, 0, 0deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+		background: rgb(240, 186, 186);
+
+	}
+}
+
+
+.property__practice {
+	height: 200px;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.property__practice div:nth-child(1) {
+	max-width: 200px;
+	min-height: 200px;
+	background: yellow;
+	transition: 2s;
+	box-shadow: 1px 1px 2px #000, inset 1px 1px 2px #000;
+	transition: 3s cubic-bezier(0, 1.13, 0, 1.14);
+	animation: property-hover-1 3s linear 1 running 0s;
+	transform: rotate3d(0, 2, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg);
+
+}
+
+@keyframes property-hover-1{
+	0%{
+			opacity: 0;
+			scale: 0;
+			border-radius: 50%;
+			transform: rotate3d(0, 0, 0, 0deg) translate3d(-450%, 0px, 0px) skew(0deg, 0deg);
+
+	}
+	100%{
+		transform: rotate3d(0, 2, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg);
+		opacity: 1;
+		scale: 1;
+
+	}
+
+}
+.property__text {
+	padding: 15px;
+	width: 200px;
+	height: 200px;
+	background:yellowgreen;
+	position: relative;
+	transition: 2s;
+	backface-visibility: hidden;
+	animation: text-property 3s linear normal running 0.001s;
+
+}
+
+@keyframes text-property{
+	0%{
+		width: 0;
+		height: 0;
+		opacity: 0;
+		font-size: 0;
+		overflow: hidden;
+		border-radius: 50%;
+	}
+	100%{
+		opacity: 1;
+		width: 200px;
+		height: 200px;
+		overflow: visible;
+		
+	}
+}
+
+
+.property__practice div:nth-child(2){
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: rgba(255, 0, 0, 0.582);
+	max-width: 200px;
+	min-height: 200px;
+	transition: all 2s;
+	animation: property-hover-2 3s linear 1 running 0s;
+	/* animation-fill-mode: forwards; */
+
+}
+
+@keyframes property-hover-2{
+	0%{
+			opacity: 0;
+			scale: 0;
+			border-radius: 50%;
+			transform: rotate3d(0, 0, 0, 0deg) translate3d(-450%, 0px, 0px) skew(0deg, 0deg);
+
+	}
+	100%{
+		/* transform: rotate3d(0, 2, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg); */
+		opacity: 1;
+		scale: 1;
+
+	}
+
+}
+.property__practice:hover .property__text{
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+	Backface-visibility: hidden;
+	width: 100px;
+	height: 100px;
+	font-size: 0;
+	overflow: hidden;
+	transition: 2s;
+	border-radius: 50px 500px 30px 100px;
+
+
+
+}
+.property__practice:hover div:nth-child(2){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(400%, 50%, 0px) skew(0deg, 0deg) ;
+	transition: border-radius 6s, transform 6s;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px 20px 100px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+
+}
+
+.property__practice:hover div:nth-child(1){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(-450%, 0px, 0px) skew(0deg, 0deg);
+	transition: background-color 10s, with 3s, height 5s, border-radius 6s;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background: rgba(0, 0, 0, 0.541);
+}
+
+
+/* transition-delay */
+.transition__delay{
+	margin-bottom: 25px;
+	animation: block-delay 2s linear 1  forwards 2s;
+
+}
+
+@keyframes block-delay {
+	0% {
+		font-size: 0;
+		opacity: 0;
+		transform: rotate3d(1, 0, 0, 90deg) translate3d(0%, -100%, 0px) skew(0deg, 0deg) ;
+		background: none;		
+
+
+	}
+	100% {
+		transform: rotate3d(1, 0, 0, 0deg) translate3d(0%, 0%, 0px) skew(0deg, 0deg) ;
+		background: rgba(98, 204, 116, 0.774);
+		opacity: 1;
+	}
+}
+
+
+.delay__practice {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.delay__practice div:nth-child(1) {
+	width: 200px;
+	height: 200px;
+	background: yellow;
+	transition: 2s cubic-bezier(0.5, 2.13, 0.5, 2.14);
+	box-shadow: 1px 1px 2px #000, inset 1px 1px 2px #000;
+
+}
+.delay__text {
+	padding: 15px;
+	width: 200px;
+	height: 200px;
+	background:yellowgreen;
+	position: relative;
+	transition: 2s;
+	backface-visibility: hidden;
+	animation: text-delay 2s linear 1  0.5s;
+
+}
+
+@keyframes text-delay{
+	0%{
+		opacity: 0;
+		font-size: 0;
+		background: none;
+		transform: rotate3d(1, 0, 0, 90deg) translate3d(0%, 0%, 0px) skew(0deg, 0deg) ;
+
+	}
+	100%{
+		opacity: 1;
+		font-size: 16px;
+		transform: rotate3d(1, 0, 0, 0deg) translate3d(0%, 0%, 0px) skew(0deg, 0deg) ;
+		width: 200px;
+		height: 200px;
+		
+	}
+}
+
+
+.delay__practice{
+	position: relative;
+	max-width: 800px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.delay__practice div:nth-child(2){
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	background: rgba(255, 0, 0, 0.582);
+}
+
+.delay__practice:hover div:nth-child(1) .delay__text {
+  transform: rotate3d(1, 1, 1, 135deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg);
+	scale: 0.5;
+	border-radius: 50%;
+	font-size: 0;
+	overflow: hidden;
+	transition:border-radius 2s, scale 2s, font-size 4s, transform 4s;
+	position: absolute;
+
+
+}
+.delay__practice:hover div:nth-child(2) .delay__text {
+  transform: rotate3d(1, 0, 1, 135deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg);
+	scale: 0.5;
+	border-radius: 50%;
+	font-size: 0;
+	overflow: hidden;
+	transition:border-radius 2s ease 3s, scale 2s ease 3s, font-size 4s ease 3s, transform 2s ease 3s, opacity 2s ease 3s;
+	position: absolute;
+	opacity: 0;
+
+
+}
+.delay__practice:hover div:nth-child(2){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(500px, 0px, 0px) skew(0deg, 0deg);
+	transition:all 3s linear 3s;
+	border-radius: 20px;
+	scale: 2;
+	background: rgba(7, 41, 235, 0.541);
+	
+
+}
+
+.delay__practice:hover div:nth-child(1){
+	transform: rotate3d(0, 1, 0, 180deg) translate3d(-500px, 0px, 0px) skew(0deg, 0deg);
+	transition:all 2s linear 1s;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background: rgba(0, 0, 0, 0.541);
+}
+
+
+/* citroen */
+.main__position {
+	animation: citroen 30s linear infinite normal running 5s forwards;
+	transform: rotate3d(0, 1, 0, 0deg) translate3d(-300%, 0px, 0px) skew(0deg, 0deg) ;
+}
+
+@keyframes citroen {
+	0%{
+		scale: 0.5;
+		
+	}
+	10%{
+		transform: rotate3d(0, 1, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+		scale: 1;
+	}
+	90%{
+		transform: rotate3d(1, 0, 0, 360deg) translate3d(0%, 0px, 0px) skew(0deg, 0deg) ;
+		scale: 1;
+		
+	}
+	100%{
+		transform: rotate3d(1, 0, 0, 0deg) translate3d(0%, -300%, 0px) skew(0deg, 0deg) ;
+		scale: 0.5;
+		
+	}
+
+
+}
+.position__citroen{
+  width: 937px;
+  height: 527px;
+  margin: 0 auto;
+  position: relative;
+	
+}
+
+
+.position__citroen img:not(:last-child){
+  position: absolute;
+  width: 188px;
+  height: 106px;
+
+}
+.position__citroen img:last-child{
+	max-width: 100%;
+
+}
+/* .position__citroen img:hover:not(:last-child){
+  opacity: 0;
+} */
+.position__citroen--part1{
+	/* width: 188px;
+	height: 105px; */
+	/* animation: citroen-part1 1s linear infinite normal running 0s forwards; */
+
+}
+
+/* @keyframes citroen-part1{
+	0%{
+		opacity: 1;
+		
+	}
+	25%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+} */
+
+
+.position__citroen--part2{
+  top: 6px;
+  left: 186px;
+	animation: citroen-part2 1s linear 1 normal running 5s forwards;
+
+}
+
+@keyframes citroen-part2{
+	0%{
+		opacity: 0;
+		
+	}
+	10%{
+		opacity: 1;
+	}
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.position__citroen--part3{
+  top: 6px;
+  left: 374px;
+	animation: citroen-part3 6s linear infinite normal running 6s forwards;
+
+}
+
+@keyframes citroen-part3{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part4{
+  top: 6px;
+  left: 560px;
+	animation: citroen-part4 7s linear infinite normal running 7s forwards;
+
+}
+
+@keyframes citroen-part4{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part5{
+  top: 6px;
+  left: 748px;
+	animation: citroen-part5 8s linear infinite normal running 8s forwards;
+
+}
+
+@keyframes citroen-part5{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part6{
+  top: 111px;
+  left: 1px;
+	animation: citroen-part6 9s linear infinite normal running 9s forwards;
+
+}
+
+@keyframes citroen-part6{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part7{
+  top: 111px;
+  left: 188px;
+	animation: citroen-part7 10s linear infinite normal running 10s forwards;
+
+}
+
+@keyframes citroen-part7{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part8{
+  top: 111px;
+  left: 375px;
+	animation: citroen-part8 11s linear infinite normal running 11s forwards;
+
+}
+
+@keyframes citroen-part8{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part9{
+  top: 111px;
+  left: 560px;
+	animation: citroen-part9 12s linear infinite normal running 12s forwards;
+
+}
+
+@keyframes citroen-part9{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part10{
+  top: 111px;
+  left: 747px;
+	animation: citroen-part10 13s linear infinite normal running 13s forwards;
+
+}
+
+@keyframes citroen-part10{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part11{
+  top: 217px;
+  left: -1px;
+	animation: citroen-part11 14s linear infinite normal running 14s forwards;
+
+}
+
+@keyframes citroen-part11{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part12{
+  top: 217px;
+  left: 187px;
+	animation: citroen-part12 15s linear infinite normal running 15s forwards;
+
+}
+
+@keyframes citroen-part12{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part13{
+  top: 217px;
+  left: 374px;
+	animation: citroen-part13 16s linear infinite normal running 16s forwards;
+
+}
+
+@keyframes citroen-part13{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part14{
+  top: 217px;
+  left: 560px;
+	animation: citroen-part14 17s linear infinite normal running 17s forwards;
+
+}
+
+@keyframes citroen-part14{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part15{
+  top: 217px;
+  left: 747px;
+	animation: citroen-part15 18s linear infinite normal running 18s forwards;
+
+}
+
+@keyframes citroen-part15{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part16{
+  top: 323px;
+  left: -1px;
+	animation: citroen-part16 19s linear infinite normal running 19s forwards;
+
+}
+
+@keyframes citroen-part16{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part17{
+  top: 323px;
+  left: 187px;
+	animation: citroen-part17 20s linear infinite normal running 20s forwards;
+
+}
+
+@keyframes citroen-part17{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.position__citroen--part18{
+  top: 323px;
+  left: 374px;
+	animation: citroen-part18 21s linear infinite normal running 21s forwards;
+
+}
+
+@keyframes citroen-part18{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part19{
+  top: 323px;
+  left: 560px;
+	animation: citroen-part19 22s linear infinite normal running 22s forwards;
+
+}
+
+@keyframes citroen-part19{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part20{
+  top: 323px;
+  left: 747px;
+	animation: citroen-part20 23s linear infinite normal running 23s forwards;
+
+}
+
+@keyframes citroen-part20{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part21{
+  top: 429px;
+  left: -1px;
+	animation: citroen-part21 24s linear infinite normal running 24s forwards;
+
+}
+
+@keyframes citroen-part21{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part22{
+  top: 429px;
+  left: 187px;
+	animation: citroen-part22 25s linear infinite normal running 25s forwards;
+
+}
+
+@keyframes citroen-part22{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part23{
+  top: 429px;
+  left: 374px;
+	animation: citroen-part23 26s linear infinite normal running 26s forwards;
+
+}
+
+@keyframes citroen-part23{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part24{
+  top: 429px;
+  left: 560px;
+	animation: citroen-part24 27s linear infinite normal running 27s forwards;
+
+}
+
+@keyframes citroen-part24{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.position__citroen--part25{
+  top: 429px;
+  left: 747px;
+	animation: citroen-part25 28s linear infinite normal running 28s forwards;
+
+}
+
+@keyframes citroen-part25{
+	0%{
+		opacity: 1;
+		
+	}
+	10%{
+		opacity: 0;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
